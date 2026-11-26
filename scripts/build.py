@@ -200,7 +200,7 @@ def case_page(project):
   </div>
 </header>
 <div class="v2-wrap v2-case-content">
-  <aside class="v2-case-aside"><p class="v2-kicker">In this case</p><nav aria-label="Case sections"><ul>{side_links}</ul></nav>
+  <aside class="v2-case-aside"><p class="v2-kicker">On this page</p><nav aria-label="Case sections"><ul>{side_links}</ul></nav>
     <p class="v2-reviewed">Source version <time datetime="{esc(project["updated"])}">{esc(project["updated"])}</time></p>
   </aside>
   <div class="v2-case-main">

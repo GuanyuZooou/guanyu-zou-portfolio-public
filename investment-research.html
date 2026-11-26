@@ -53,7 +53,7 @@
   </div>
 </header>
 <div class="v2-wrap v2-case-content">
-  <aside class="v2-case-aside"><p class="v2-kicker">In this case</p><nav aria-label="Case sections"><ul><li><a href="#let-a-negative-result-change-the-question">What the historical test showed</a></li><li><a href="#compare-plans-on-the-same-assumptions">Compare plans under the same conditions</a></li><li><a href="#decisions-and-collaboration">How I worked with AI on the project</a></li></ul></nav>
+  <aside class="v2-case-aside"><p class="v2-kicker">On this page</p><nav aria-label="Case sections"><ul><li><a href="#let-a-negative-result-change-the-question">What the historical test showed</a></li><li><a href="#compare-plans-on-the-same-assumptions">Compare plans under the same conditions</a></li><li><a href="#decisions-and-collaboration">How I worked with AI on the project</a></li></ul></nav>
     <p class="v2-reviewed">Source version <time datetime="2026-11-26">2026-11-26</time></p>
   </aside>
   <div class="v2-case-main">
@@ -66,15 +66,15 @@
 </figure>
     <section class="v2-case-section" id="let-a-negative-result-change-the-question">
   <h2>What the historical test showed</h2>
-  <p>I set out to test a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters outside the training period. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had been inspected before the test, and daily prices do not show which price was reached first.</p>
+  <p>I set out to test a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters held out for testing. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had been inspected before the test, and daily prices do not show which price was reached first.</p>
   <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/research_v2/README.md#historical-findings">Historical results and limits</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/research_v2/validation.py">How the quarterly tests work</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/repro_data/DATA_SOURCES.md">Historical data sources</a></li></ul>
 </section><section class="v2-case-section" id="compare-plans-on-the-same-assumptions">
   <h2>Compare plans under the same conditions</h2>
-  <p>The offline tool screens a catalogue against the user’s constraints and can return an empty list. Its example compares a 60/40 allocation with holding cash, buying and holding a broad equity investment, and investing in stages. All four use the same simulated pound prices, deposits and costs. The example checks the workflow. Its usefulness in real markets remains untested.</p>
+  <p>The offline tool screens a catalogue against the user’s constraints and can return an empty list. Its example compares a 60/40 allocation with holding cash, buying and holding a broad equity investment, and investing in stages. All four use the same simulated prices in pounds, deposits and costs. The example checks the workflow. Its usefulness in real markets remains untested.</p>
   <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/platform/plan_screen.py">Screening code</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/platform/compare_plan.py">Comparison code</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/tests/test_platform_compare_plan.py">Automated tests</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/docs/platform/media/plan-comparison-demo.mp4">Recorded walkthrough</a></li></ul>
 </section><section class="v2-case-section" id="decisions-and-collaboration">
   <h2>How I worked with AI on the project</h2>
-  <p>I set the research question, chose the comparison baselines and kept the poor historical result in the record. ChatGPT and Codex helped with source research, protocol design, implementation and testing. The output is for comparing assumptions in a research setting. It gives no investment recommendation or trade instruction.</p>
+  <p>I set the research question, asked for a common basis for comparison and kept the poor historical result in the record. ChatGPT and Codex helped with source research, protocol design, implementation and testing. The output is for comparing assumptions in a research setting. It gives no investment recommendation or trade instruction.</p>
   <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/docs/platform/development-record.md">Project decisions and contributions</a></li></ul>
 </section>
 

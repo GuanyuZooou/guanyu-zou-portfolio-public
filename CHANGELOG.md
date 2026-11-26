@@ -1,5 +1,11 @@
 # Changelog
 
+## Portfolio v2 · Final editorial polish
+
+- Broadens the homepage introduction to cover engineering models, research workflows and tools built with AI assistance.
+- Groups existing collaboration and teaching examples under three short headings within About.
+- Keeps the website structure, PhD status and Research Disclosure. Aligns case labels and keeps experimental details and scope in the case studies.
+
 ## v2.2 · Editorial review candidate
 
 - Rewrites the homepage, project catalogue and all case studies in plain British English.

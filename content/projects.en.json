@@ -1,7 +1,7 @@
 {
   "language": "en",
   "title": "Guanyu Zou | Research & Technology Portfolio",
-  "description": "Guanyu Zou, computational materials researcher at The University of Manchester. I work on heat-transfer models, simulation automation and research tools.",
+  "description": "Guanyu Zou’s work spans computational materials research at The University of Manchester, engineering models, simulation automation and AI-assisted tools.",
   "categories": [
     {
       "id": "research",
@@ -84,7 +84,7 @@
         },
         {
           "title": "Scope of the benchmark",
-          "text": "These are numerical checks on the cases studied. Experimental validation and estimates of how the room result varies with mesh size or radiation directions remain open. The workflow shows why it helps to check the heat balance as well as the solver’s stopping criteria.",
+          "text": "The numerical checks cover the benchmark cases. How the room result changes with mesh size or radiation direction, and how it compares with experiments, remain open questions.",
           "evidence": [
             [
               "Scope and upstream attribution",
@@ -102,13 +102,13 @@
         "license": "Project-authored public figure. See upstream OpenFOAM attribution in THIRD_PARTY.md."
       },
       "featured_copy": {
-        "problem": "This workflow checks whether an OpenFOAM result balances the heat going in and out.",
-        "proof": "The room model initially missed the 5% tolerance at 7.96%. A stricter stopping rule brought the imbalance down to 0.918%."
+        "problem": "Checks OpenFOAM heat-transfer simulations against analytical solutions and energy balances.",
+        "proof": "A heat-balance check caught an imbalance after the solver had stopped. A stricter stopping rule brought it within tolerance."
       }
     },
     {
       "id": "fem",
-      "title": "Multiphysics FEM & Thermal Modelling",
+      "title": "3D FEM & thermal modelling",
       "category": "research",
       "status": "Doctoral research",
       "summary": "I built COMSOL models of fibre networks to study how heat moves through fibrous materials.",
@@ -122,7 +122,7 @@
     },
     {
       "id": "ml",
-      "title": "Scientific ML & Surrogate Modelling",
+      "title": "Scientific ML & surrogate modelling",
       "category": "research",
       "status": "Doctoral research",
       "summary": "I built and tested models that estimate thermal conductivity for engineering calculations.",
@@ -136,7 +136,7 @@
     },
     {
       "id": "imaging",
-      "title": "3D Microstructure Analysis",
+      "title": "3D imaging & structural analysis",
       "category": "research",
       "status": "Doctoral research",
       "summary": "I processed 3D images to measure porosity, fibre orientation and connectivity, and checked the measurements against reference structures.",
@@ -150,7 +150,7 @@
     },
     {
       "id": "tools",
-      "title": "Scientific Software & Automation Workflows",
+      "title": "Scientific tools & workflows",
       "category": "research",
       "status": "Technical practice",
       "summary": "I use scripting to automate geometry, simulation runs, data checks and reporting.",
@@ -200,7 +200,7 @@
         },
         {
           "title": "Keep the author in charge of the claim",
-          "text": "Two rules ask Codex to state what the study observed before suggesting why it happened, and to keep uncertainty visible when a mechanism has yet to be shown. The author decides whether to accept changes in meaning. The public files show how the skill works. Its effect on manuscript quality has yet to be measured.",
+          "text": "The rules ask Codex to describe what the study observed before suggesting why it happened. They keep uncertainty visible when the mechanism is unclear. The author decides whether a change in meaning is justified. The effect on manuscript quality remains an open question.",
           "id": "keep-editorial-decisions-accountable"
         }
       ]
@@ -212,7 +212,7 @@
       "status": "Public Codex skill",
       "updated": "2026-08-13",
       "summary": "A set of instructions for Codex that turns a selected group of papers into a writing guide, with examples and exceptions for each rule.",
-      "outcome": "Python scripts set up the review files and check that each draft rule includes its sources.",
+      "outcome": "Python scripts set up the review files and check that each draft rule includes fields for supporting examples and exceptions.",
       "stack": [
         "Codex skill",
         "Source review",
@@ -306,7 +306,7 @@
         },
         {
           "title": "Try the palette on a new figure",
-          "text": "Transfer uses the new figure’s chart type, number of series and planned emphasis to suggest which colours to use. It flags cases where the recommendation is uncertain. The built-in example warns when it cannot find a clear neutral. Check that the result is readable and the emphasis still makes sense before using the export.",
+          "text": "Transfer uses the chart type, number of series and what you want to highlight to suggest colours. The built-in example warns that it could not find a clear neutral colour. Review the contrast and emphasis before using the export.",
           "evidence": [
             [
               "Automated checks",
@@ -337,8 +337,8 @@
         }
       ],
       "featured_copy": {
-        "problem": "See which colours in a figure carry the data, provide context or draw the reader’s eye.",
-        "proof": "Transfer Lab suggests colours for a new figure. Review the choices and export them as JSON, CSS or a report."
+        "problem": "See how colours are used in a scientific figure and review suggestions for a new chart.",
+        "proof": "Export the suggested palette as JSON, CSS or a report."
       }
     },
     {
@@ -375,7 +375,7 @@
         },
         {
           "title": "Work with your own records locally",
-          "text": "The single-user workspace and command-line tool use the same local JSON file. The software checks the file version before saving and writes updates as a single operation. The public demo uses fictional candidate data. The applicant checks the matches, sources and wording before using a draft.",
+          "text": "The single-user workspace keeps your records on your own machine. You can review each match, its source and the wording before using a draft.",
           "evidence": [
             [
               "How files are saved",
@@ -386,7 +386,7 @@
         },
         {
           "title": "What was tested",
-          "text": "All 14 automated tests using fictional data passed in the repository review. A separate Chromium walkthrough covered saving, translation review and draft checks. Tests cover the workflow. Hiring outcomes and multi-user use have yet to be studied.",
+          "text": "All 14 automated tests passed using fictional data. A browser walkthrough also checked saving, translation review and draft checks. Hiring outcomes and multi-user use remain open questions.",
           "evidence": [
             [
               "Automated tests",
@@ -408,8 +408,8 @@
         "license": "Portfolio capture of the owner’s MIT-licensed public demo, using its synthetic fixture."
       },
       "featured_copy": {
-        "problem": "Find out which parts of your experience match a role and where you need more information.",
-        "proof": "The demo shows the source behind a match. Translated wording stays out of a draft until it has been checked."
+        "problem": "Match your experience to job requirements and start a draft in English or Simplified Chinese.",
+        "proof": "Try the matching workflow with fictional candidate data in the public demo."
       }
     },
     {
@@ -437,7 +437,7 @@
       "sections": [
         {
           "title": "What the historical test showed",
-          "text": "I set out to test a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters outside the training period. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had been inspected before the test, and daily prices do not show which price was reached first.",
+          "text": "I set out to test a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters held out for testing. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had been inspected before the test, and daily prices do not show which price was reached first.",
           "evidence": [
             [
               "Historical results and limits",
@@ -456,7 +456,7 @@
         },
         {
           "title": "Compare plans under the same conditions",
-          "text": "The offline tool screens a catalogue against the user’s constraints and can return an empty list. Its example compares a 60/40 allocation with holding cash, buying and holding a broad equity investment, and investing in stages. All four use the same simulated pound prices, deposits and costs. The example checks the workflow. Its usefulness in real markets remains untested.",
+          "text": "The offline tool screens a catalogue against the user’s constraints and can return an empty list. Its example compares a 60/40 allocation with holding cash, buying and holding a broad equity investment, and investing in stages. All four use the same simulated prices in pounds, deposits and costs. The example checks the workflow. Its usefulness in real markets remains untested.",
           "evidence": [
             [
               "Screening code",
@@ -479,7 +479,7 @@
         },
         {
           "title": "How I worked with AI on the project",
-          "text": "I set the research question, chose the comparison baselines and kept the poor historical result in the record. ChatGPT and Codex helped with source research, protocol design, implementation and testing. The output is for comparing assumptions in a research setting. It gives no investment recommendation or trade instruction.",
+          "text": "I set the research question, asked for a common basis for comparison and kept the poor historical result in the record. ChatGPT and Codex helped with source research, protocol design, implementation and testing. The output is for comparing assumptions in a research setting. It gives no investment recommendation or trade instruction.",
           "evidence": [
             [
               "Project decisions and contributions",
@@ -492,7 +492,7 @@
     },
     {
       "id": "ai-for-science",
-      "title": "AI for Science",
+      "title": "AI for materials research",
       "category": "innovation",
       "status": "Exploratory direction",
       "summary": "I am exploring how physics and carefully checked data can improve machine learning for materials research.",
