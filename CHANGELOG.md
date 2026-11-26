@@ -1,5 +1,10 @@
 # Changelog
 
+## Doctoral research thread · Review candidate
+
+- Connects the three doctoral cases around how fibre microstructure can inform heat-transfer predictions.
+- Adds shared navigation between the research overview and the FEM, scientific ML and imaging cases.
+
 ## v2.1 · Editorial and visual review candidate
 
 - Rebalances the homepage hero around three areas of practice using existing OpenFOAM, Palette Miner and synthetic Investment Research imagery.

@@ -210,9 +210,34 @@ def case_page(project):
     return page(project["title"] + " | Guanyu Zou", project["summary"], case_path(project), body)
 
 
+DOCTORAL_CASES = (
+    ("fem.html", "FEM"),
+    ("ml.html", "Scientific ML"),
+    ("imaging.html", "3D imaging"),
+)
+
+
+def doctoral_navigation(current):
+    overview = link("Doctoral research", "index.html#doctoral-research")
+    cases = []
+    for target, label in DOCTORAL_CASES:
+        attributes = ' aria-current="page"' if target == current else ""
+        cases.append(f'<a href="{target}"{attributes}>{label}</a>')
+    return (
+        '<nav class="v2-research-nav" aria-label="Doctoral research">'
+        f'<div class="v2-wrap">{overview}<ul>'
+        + "".join(f"<li>{item}</li>" for item in cases)
+        + "</ul></div></nav>"
+    )
+
+
 def legacy_page(path):
     text = path.read_text(encoding="utf-8")
     text = re.sub(r'<a class="skip-link".*?</header>', lambda _: header(), text, count=1, flags=re.S)
+    if path.name in dict(DOCTORAL_CASES):
+        # Replace a previous generated trail before inserting the current one.
+        text = re.sub(r'<nav class="v2-research-nav".*?</nav>', "", text, count=1, flags=re.S)
+        text = text.replace("</header>", "</header>" + doctoral_navigation(path.name), 1)
     text = re.sub(r'<footer class="(?:footer|v2-footer)".*?</footer>', lambda _: footer(), text, count=1, flags=re.S)
     if "portfolio-v2.css" not in text:
         text = text.replace("</head>", '<link rel="stylesheet" href="portfolio-v2.css"><script src="portfolio-v2.js" defer></script></head>', 1)
