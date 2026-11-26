@@ -3,49 +3,57 @@
     <div class="v2-hero-copy">
       <p class="v2-kicker">Guanyu Zou <span>·</span> Researcher &amp; technology builder</p>
       <h1>From complex questions to <em>tested solutions.</em></h1>
-      <p class="v2-lead">I bring materials research and scientific computing to problems that need a clearer model, a better tool or stronger evidence for a decision.</p>
+      <p class="v2-lead">I apply the habits of materials research to engineering simulations, reusable knowledge tools and decisions that need better evidence.</p>
       <div class="v2-actions">
         <a class="v2-button v2-button-primary" href="#work">Explore the projects</a>
         <a class="v2-button" href="#approach">How I work</a>
       </div>
-      <p class="v2-hero-note">Computational materials <span>·</span> Engineering verification <span>·</span> Knowledge tools</p>
     </div>
-    <figure class="v2-hero-evidence">
-      <div class="v2-figure-head"><span>Featured evidence</span><span>OpenFOAM</span></div>
-      <a href="openfoam.html"><img src="assets/projects/openfoam-room.png" alt="Wall and net thermal power over steady iterations after continuing the room radiation run" fetchpriority="high"></a>
-      <figcaption>
-        <strong>What the residuals missed</strong>
-        <span>A wall energy budget caught an imbalance the solver’s stopping criteria had missed.</span>
-        <a class="v2-text-link" href="openfoam.html">Read the verification case</a>
-      </figcaption>
-    </figure>
+    <nav class="v2-practice-grid" aria-label="Areas of practice">
+      <a class="v2-practice-tile v2-practice-engineering" href="#research">
+        <div class="v2-practice-media">
+          <img src="assets/projects/openfoam-verification.png" width="2623" height="741" alt="OpenFOAM verification figure showing analytical comparison, a thermal budget and a wall-energy balance check" fetchpriority="high">
+        </div>
+        <span>Scientific Computing &amp; Engineering</span>
+      </a>
+      <a class="v2-practice-tile v2-practice-colour" href="#knowledge">
+        <div class="v2-practice-media">
+          <img src="assets/projects/palette-gallery.png" width="1500" height="585" alt="Three synthetic examples from Palette Miner’s scientific colour gallery">
+        </div>
+        <span>AI &amp; Knowledge Engineering</span>
+      </a>
+      <a class="v2-practice-tile v2-practice-decision" href="#lab">
+        <div class="v2-practice-media">
+          <img src="assets/projects/investment-comparison.png" width="1280" height="720" alt="Investment Research comparison interface using a synthetic GBP replay">
+        </div>
+        <span>Decision Intelligence<small>Synthetic scenario</small></span>
+      </a>
+    </nav>
   </div>
 </section>
 
-<section class="v2-section v2-wrap" id="work">
-  <div class="v2-section-head"><div><p class="v2-kicker">Selected work</p><h2>Projects with evidence.</h2></div><p>Each project links to the decisions, implementation and evidence behind the result.</p></div>
+<section class="v2-section v2-wrap v2-featured" id="work">
+  <div class="v2-section-head"><h2>Selected projects.</h2><p>Three projects that show how I check a result, make evidence reviewable and turn a method into a tool.</p></div>
   <div class="v2-feature-grid">$featured</div>
 </section>
 
 <section class="v2-section v2-directory" id="skills">
   <div class="v2-wrap" id="tools">
-    <div class="v2-section-head"><div><p class="v2-kicker">Project catalogue</p><h2>Explore by direction.</h2></div><p>My work spans materials research, reusable knowledge tools and experiments in decision support.</p></div>
-    <div class="v2-filters" data-filters hidden role="group" aria-label="Filter projects">$filters</div>
-    <p class="v2-sr-only" role="status" data-filter-status></p>
+    <div class="v2-section-head"><h2>Explore by direction.</h2><p>Browse the full collection, from computational materials research to independent experiments in decision support.</p></div>
     $groups
     <aside class="v2-disclosure"><h3>Research Disclosure</h3><p>Detailed research findings are currently restricted. This portfolio provides a high-level overview of the work, focusing on the methodologies, technical capabilities and potential engineering applications.</p></aside>
   </div>
 </section>
 
-<section class="v2-section v2-wrap" id="approach">
-  <div class="v2-section-head"><div><p class="v2-kicker">Method</p><h2>How I work.</h2></div><p>I turn an open question into a testable one, then make the result usable by someone else.</p></div>
+<section class="v2-section v2-wrap v2-method-section" id="approach">
+  <div class="v2-section-head"><h2>How I work.</h2><p>Turn an open question into something I can test and a method someone else can use.</p></div>
   <ol class="v2-method">
-    <li><h3>Identify</h3><p>Find the decision behind the request. A weak historical signal led me to ask how competing plans could be compared under the same assumptions.</p><a href="investment-research.html">Historical study and redesign</a></li>
-    <li><h3>Investigate</h3><p>Trace claims to their sources, check exceptions and distinguish observations from interpretation.</p><a href="writing-method.html">Rule extraction protocol</a></li>
-    <li><h3>Design</h3><p>Choose a representation people can inspect. Career Intelligence links each requirement to evidence that a candidate can review.</p><a href="career-intelligence.html">Requirement-to-evidence mapping</a></li>
-    <li><h3>Build</h3><p>Use AI to assist with research and implementation where documented. Keep goals, acceptance criteria and decisions visible to the person doing the work.</p><a href="investment-research.html#decisions-and-collaboration">Project contribution record</a></li>
-    <li><h3>Verify</h3><p>Test a result against a separate standard. For thermal CFD, check an energy balance alongside convergence.</p><a href="openfoam.html">Verification report and data</a></li>
-    <li><h3>Transfer</h3><p>Package decisions in a form others can reuse. Palette Miner exports a reviewed mapping for later figures.</p><a href="palette-miner.html">Transfer Lab and exports</a></li>
+    <li><h3>Identify</h3><p>Frame the decision and set a fair comparison.</p><a href="investment-research.html">Historical study and redesign</a></li>
+    <li><h3>Investigate</h3><p>Trace a claim to its sources and look for exceptions.</p><a href="writing-method.html">Rule extraction protocol</a></li>
+    <li><h3>Design</h3><p>Make each requirement inspectable alongside its evidence.</p><a href="career-intelligence.html">Requirement-to-evidence mapping</a></li>
+    <li><h3>Build</h3><p>Use AI to explore and implement against explicit acceptance criteria.</p><a href="investment-research.html#decisions-and-collaboration">Project contribution record</a></li>
+    <li><h3>Verify</h3><p>Check the energy balance alongside solver convergence.</p><a href="openfoam.html">Verification report and data</a></li>
+    <li><h3>Transfer</h3><p>Export a reviewed colour mapping so others can reuse it.</p><a href="palette-miner.html">Transfer Lab and exports</a></li>
   </ol>
 </section>
 
@@ -53,9 +61,10 @@
   <div class="v2-wrap v2-about-grid">
     <div><p class="v2-kicker">About</p><h2>I’m Guanyu Zou.</h2></div>
     <div>
-      <p class="v2-lead">My background is in computational materials research at The University of Manchester. I work across multiphysics simulation, scientific machine learning and microstructure analysis, and develop tools that make technical decisions easier to inspect and reuse.</p>
+      <p class="v2-lead">My background is in computational materials research at The University of Manchester, where my work spans multiphysics simulation, scientific machine learning and microstructure analysis.</p>
+      <p>I’m curious about how the same habits apply to unfamiliar problems. I enjoy framing a question, testing ideas against evidence and turning a useful method into something others can use. AI helps me explore and build. I rely on evidence and scientific judgement to decide what holds up.</p>
       <p class="v2-viva"><strong>PhD viva passed with minor corrections on 20 November 2026.</strong> Currently completing thesis corrections.</p>
-      <p>I’m interested in scientific software, application science and engineering, and collaborations that connect technical evidence with real decisions.</p>
+      <p>I’m interested in scientific software, application science and engineering, and collaborations that put technical evidence to work.</p>
     </div>
   </div>
 </section>

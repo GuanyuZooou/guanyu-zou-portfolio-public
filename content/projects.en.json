@@ -97,6 +97,10 @@
         "caption": "Published room radiation continuation figure.",
         "source": "evidence/figures/fvdom-continuation/hotRadiationRoomFvDOM-conservation.png",
         "license": "Project-authored public figure. See upstream OpenFOAM attribution in THIRD_PARTY.md."
+      },
+      "featured_copy": {
+        "problem": "A thermal solver can stop before its energy budget balances.",
+        "proof": "After tightening convergence on the same coarse room setup, wall energy imbalance fell from 7.96% to 0.918%."
       }
     },
     {
@@ -320,7 +324,11 @@
           "source": "examples/gallery-overview.png",
           "license": "Original project artwork under MIT. Third-party figures are not redistributed here."
         }
-      ]
+      ],
+      "featured_copy": {
+        "problem": "A palette is hard to reuse when the role of each colour is unclear.",
+        "proof": "Transfer Lab lets you review a mapping and export JSON, CSS variables and a report."
+      }
     },
     {
       "id": "career-intelligence",
@@ -384,6 +392,10 @@
         "caption": "Actual public demo, using synthetic candidate data. Evidence coverage indicates what can be traced to sources.",
         "source_url": "https://guanyuzooou.github.io/career-intelligence-lab/",
         "license": "Portfolio capture of the owner’s MIT-licensed public demo, using its synthetic fixture."
+      },
+      "featured_copy": {
+        "problem": "Application drafts can obscure which sources support each requirement.",
+        "proof": "The synthetic demo traces matches to their sources and holds unreviewed translations out of draft wording."
       }
     },
     {

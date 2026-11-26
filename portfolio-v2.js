@@ -24,28 +24,74 @@
     });
   }
 
-  const filters = document.querySelector("[data-filters]");
-  if (!filters) return;
+  const groups = [...document.querySelectorAll("[data-project-group]")].map(section => {
+    const toggle = section.querySelector(".v2-category-toggle");
+    return {
+      section,
+      toggle,
+      label: section.querySelector("[data-category-label]"),
+      panel: document.getElementById(toggle.getAttribute("aria-controls")),
+      mobileOpen: section.dataset.projectGroup === "research",
+    };
+  });
+  if (!groups.length) return;
 
-  const buttons = [...filters.querySelectorAll("[data-category]")];
-  const groups = [...document.querySelectorAll("[data-project-group]")];
-  const status = document.querySelector("[data-filter-status]");
-
-  function selectCategory(selected) {
-    const category = selected.dataset.category;
-    for (const button of buttons) button.setAttribute("aria-pressed", String(button === selected));
-    for (const group of groups) group.hidden = category !== "all" && group.dataset.projectGroup !== category;
-    const visible = groups.reduce((count, group) => count + (group.hidden ? 0 : group.querySelectorAll(".v2-project-row").length), 0);
-    status.textContent = visible + " projects shown";
+  function hashGroup(hash = location.hash) {
+    const target = document.getElementById(hash.slice(1));
+    return groups.find(({section}) => section.contains(target));
   }
 
-  for (const button of buttons) button.addEventListener("click", () => selectCategory(button));
-  filters.hidden = false;
+  function updateCatalogue() {
+    const focus = document.activeElement;
+    for (const group of groups) {
+      const {toggle, label, panel} = group;
+      if (narrow.matches && panel.contains(focus)) group.mobileOpen = true;
+
+      const expanded = !narrow.matches || group.mobileOpen;
+      toggle.hidden = !narrow.matches;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      label.hidden = narrow.matches;
+      panel.hidden = !expanded;
+
+      if (!narrow.matches && focus === toggle) {
+        panel.querySelector("a")?.focus({preventScroll: true});
+      }
+    }
+  }
+
+  for (const group of groups) {
+    group.toggle.addEventListener("click", () => {
+      group.mobileOpen = !group.mobileOpen;
+      if (!group.mobileOpen && group.panel.contains(document.activeElement)) group.toggle.focus();
+      updateCatalogue();
+    });
+  }
+
+  const initialGroup = hashGroup();
+  if (initialGroup && narrow.matches) initialGroup.mobileOpen = true;
+  updateCatalogue();
+  narrow.addEventListener("change", () => {
+    const group = hashGroup();
+    if (group && narrow.matches) group.mobileOpen = true;
+    updateCatalogue();
+  });
+
+  document.addEventListener("click", (event) => {
+    const href = event.target.closest('a[href^="#"]')?.getAttribute("href");
+    if (!narrow.matches || href !== location.hash) return;
+    const group = hashGroup(href);
+    if (group) {
+      group.mobileOpen = true;
+      updateCatalogue();
+    }
+  });
+
   window.addEventListener("hashchange", () => {
-    const target = document.getElementById(location.hash.slice(1));
-    const group = target?.closest("[data-project-group]");
-    if (group?.hidden) {
-      selectCategory(buttons[0]);
+    const group = hashGroup();
+    if (group && narrow.matches) {
+      group.mobileOpen = true;
+      updateCatalogue();
+      const target = document.getElementById(location.hash.slice(1));
       target.scrollIntoView();
     }
   });

@@ -111,15 +111,20 @@ def link_image(media):
 
 def featured_card(project):
     media = project.get("feature_media") or project["media"]
+    copy = project["featured_copy"]
+    title = esc(project["title"])
+    actions = [f'<a href="{case_path(project)}" aria-label="Case study: {title}">Case study</a>']
+    if project.get("demo"):
+        actions.append(f'<a href="{esc(project["demo"])}" aria-label="Live demo: {title}">Live demo</a>')
     return f'''<article class="v2-feature-card">
   <div class="v2-feature-image">{picture(media)}</div>
   <div class="v2-feature-body">
-    <p class="v2-kicker">{esc(CATEGORY_LABEL[project["category"]])}</p>
-    <h3>{link(project["title"], case_path(project))}</h3>
-    <p>{esc(project["summary"])}</p>
+    <h3>{title}</h3>
+    <p class="v2-feature-problem">{esc(copy["problem"])}</p>
+    <p class="v2-feature-proof">{esc(copy["proof"])}</p>
+    <div class="v2-feature-actions">{"".join(actions)}</div>
   </div>
 </article>'''
-
 
 def row(project):
     return f'''<li class="v2-project-row">
@@ -129,27 +134,28 @@ def row(project):
 
 
 def home_page():
-    filters = "".join(
-        f'<button type="button" data-category="{esc(key)}" aria-pressed="{str(key == "all").lower()}">{esc(label)}</button>'
-        for key, label in [("all", "All projects"), *CATEGORY_LABEL.items()]
-    )
     groups = []
     for category in CATEGORIES:
         key = category["id"]
         anchor = "lab" if key == "innovation" else key
+        label = esc(category["label"])
         projects = "\n".join(row(p) for p in PROJECTS.values() if p["category"] == key)
         groups.append(f'''<section class="v2-project-group" data-project-group="{key}" id="{anchor}" aria-labelledby="{key}-heading">
-  <div><h3 id="{key}-heading">{esc(category["label"])}</h3><p>{esc(category["description"])}</p></div>
-  <ul>{projects}</ul>
+  <div class="v2-project-group-intro">
+    <h3 id="{key}-heading">
+      <span data-category-label>{label}</span>
+      <button type="button" class="v2-category-toggle" aria-expanded="true" aria-controls="{key}-projects" hidden>{label}<span aria-hidden="true"></span></button>
+    </h3>
+    <p>{esc(category["description"])}</p>
+  </div>
+  <ul id="{key}-projects">{projects}</ul>
 </section>''')
     body = HOME.substitute(
         featured="\n".join(featured_card(PROJECTS[key]) for key in CATALOGUE["featured"]),
-        filters=filters,
         groups="\n".join(groups),
         contacts=contact_links("v2-button"),
     )
     return page(CATALOGUE["title"], CATALOGUE["description"], "", body, home=True)
-
 
 def anchor(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
