@@ -5,6 +5,7 @@
 - Rebalances the homepage hero around three areas of practice using existing OpenFOAM, Palette Miner and synthetic Investment Research imagery.
 - Updates the three featured cards to show the problem, a supported outcome and direct case study or demo actions.
 - Replaces catalogue filters with mobile category disclosures. The research category opens by default. Category hashes and desktop navigation stay available.
+- Adds a direct hero link and a concise doctoral research section for FEM, scientific machine learning and 3D microstructure analysis.
 - Condenses the six-stage method into one visual sequence and adds the user's research motivation to About. The academic status and Research Disclosure are retained.
 - Captures local v2.0 versus v2.1 desktop and mobile comparisons. Review is isolated from the public deployment.
 
