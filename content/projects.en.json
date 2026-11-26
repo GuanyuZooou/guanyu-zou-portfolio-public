@@ -1,0 +1,478 @@
+{
+  "language": "en",
+  "title": "Guanyu Zou | Research & Technology Portfolio",
+  "description": "Guanyu Zou is a materials researcher and technology builder working across scientific computing, knowledge engineering and independent technical research.",
+  "categories": [
+    {
+      "id": "research",
+      "label": "Research & Engineering",
+      "description": "Simulation, scientific computing and ways to make technical workflows repeatable."
+    },
+    {
+      "id": "knowledge",
+      "label": "AI & Knowledge Engineering",
+      "description": "Tools that turn source evidence and expert judgement into reusable methods."
+    },
+    {
+      "id": "innovation",
+      "label": "Innovation Lab",
+      "description": "Independent experiments in decision support, built around explicit questions and testable assumptions."
+    }
+  ],
+  "featured": [
+    "openfoam",
+    "career-intelligence",
+    "palette-miner"
+  ],
+  "projects": [
+    {
+      "id": "openfoam",
+      "title": "OpenFOAM Thermal Verification",
+      "category": "research",
+      "status": "Public verification study",
+      "updated": "2026-11-26",
+      "summary": "A thermal CFD study that tested whether solver convergence was enough to trust the energy balance.",
+      "outcome": "Wall energy imbalance fell from 7.96% to 0.918% after a tighter convergence check on the same coarse configuration.",
+      "stack": [
+        "OpenFOAM 13",
+        "Python",
+        "Conservation checks"
+      ],
+      "media": {
+        "file": "assets/projects/openfoam-verification.png",
+        "alt": "Archived OpenFOAM verification overview showing slab benchmark checks and room radiation energy balance",
+        "caption": "Public verification overview generated from the archived numerical data. Open the figure for the full labels.",
+        "source": "evidence/figures/verification-overview.png",
+        "license": "Project-authored public figure. See upstream OpenFOAM attribution in THIRD_PARTY.md."
+      },
+      "repo": "openfoam-thermal-verification",
+      "revision": "38f8fc0f1b574ee8b0b5d41d3880cfa811748ce7",
+      "sections": [
+        {
+          "title": "A converged run still left an energy gap",
+          "text": "The study separates a planar slab benchmark with analytical references from a room radiation case with a wall heat-flow budget. In the room case, the coarse fvDOM run met its solver stopping criteria, yet the energy imbalance exceeded the study’s 5% gate.",
+          "evidence": [
+            [
+              "Verification report",
+              "REPORT.md"
+            ],
+            [
+              "Archived check results",
+              "evidence/data/checks.csv"
+            ]
+          ]
+        },
+        {
+          "title": "Tighten the stopping rule and check the budget again",
+          "text": "The room run was restarted with the same coarse spatial and angular discretisation, tighter outer enthalpy convergence and a higher iteration cap. The wall balance passed the gate. The separate slab suite checked 21 configurations against analytical or energy references.",
+          "evidence": [
+            [
+              "Runner and verification logic",
+              "scripts/run.py"
+            ],
+            [
+              "Room radiation endpoints",
+              "evidence/data/radiation_endpoints.csv"
+            ],
+            [
+              "Archived run provenance",
+              "evidence/provenance.json"
+            ]
+          ]
+        },
+        {
+          "title": "What the evidence establishes",
+          "text": "The evidence supports numerical verification and consistency checks for the tested configurations. Experimental validation and spatial or angular uncertainty estimates remain outside this study. The transferable practice is to use an independent balance or benchmark alongside residual and stopping criteria.",
+          "evidence": [
+            [
+              "Scope and upstream attribution",
+              "THIRD_PARTY.md"
+            ]
+          ]
+        }
+      ],
+      "feature_media": {
+        "file": "assets/projects/openfoam-room.png",
+        "alt": "Wall and net thermal power over steady iterations in the continued OpenFOAM room radiation run",
+        "caption": "Published room radiation continuation figure.",
+        "source": "evidence/figures/fvdom-continuation/hotRadiationRoomFvDOM-conservation.png",
+        "license": "Project-authored public figure. See upstream OpenFOAM attribution in THIRD_PARTY.md."
+      }
+    },
+    {
+      "id": "fem",
+      "title": "Multiphysics FEM & Thermal Modelling",
+      "category": "research",
+      "status": "Doctoral research",
+      "summary": "Coupled heat transfer in heterogeneous materials, with parameterised geometry and reference checks.",
+      "outcome": "A repeatable route from geometry and physics setup to interpretable thermal comparisons.",
+      "stack": [
+        "COMSOL",
+        "FEM",
+        "Heat transfer"
+      ],
+      "legacy": true
+    },
+    {
+      "id": "ml",
+      "title": "Scientific ML & Surrogate Modelling",
+      "category": "research",
+      "status": "Doctoral research",
+      "summary": "Surrogate models for scientific and engineering workflows, supported by grouped validation and held-out tests.",
+      "outcome": "Model comparisons organised around generalisation and the cost of repeated simulation.",
+      "stack": [
+        "Python",
+        "Grouped validation",
+        "Regression"
+      ],
+      "legacy": true
+    },
+    {
+      "id": "imaging",
+      "title": "3D Microstructure Analysis",
+      "category": "research",
+      "status": "Doctoral research",
+      "summary": "Volumetric image processing and structural measurement, with attention to representation and reproducibility.",
+      "outcome": "A workflow for extracting interpretable descriptors from reconstructed microstructures.",
+      "stack": [
+        "3D imaging",
+        "Image analysis",
+        "Descriptors"
+      ],
+      "legacy": true
+    },
+    {
+      "id": "tools",
+      "title": "Scientific Software & Automation Workflows",
+      "category": "research",
+      "status": "Technical practice",
+      "summary": "Reusable simulations, data checks and reporting with traceable settings.",
+      "outcome": "Repeatable workflows around scientific tools and their outputs.",
+      "stack": [
+        "COMSOL Java API",
+        "Python",
+        "Scientific workflows"
+      ],
+      "legacy": true
+    },
+    {
+      "id": "writing-editor",
+      "title": "Evidence-Based Scientific Writing Editor",
+      "category": "knowledge",
+      "status": "Public Codex skill",
+      "updated": "2026-08-13",
+      "summary": "An editorial workflow that ties manuscript claims, figure structure and revisions to the available evidence.",
+      "outcome": "A reusable instruction set and rule catalogue for reviewing how a scientific argument is built.",
+      "stack": [
+        "Agent skills",
+        "Editorial reasoning",
+        "Evidence tracing"
+      ],
+      "repo": "evidence-based-scientific-writing-editor",
+      "revision": "9421eb47414f88fedcc6c0d7bc4a332c2d5ea15b",
+      "related": "writing-method",
+      "sections": [
+        {
+          "title": "Apply an editorial method to a new manuscript",
+          "text": "The skill directs an agent to inspect the source evidence and manuscript context before proposing an organising claim, figure order or revision. The rule catalogue and reference method make the reasoning available for human review.",
+          "evidence": [
+            [
+              "Public skill specification",
+              "skills/evidence-based-scientific-writing-editor/SKILL.md"
+            ],
+            [
+              "Editorial reference method",
+              "skills/evidence-based-scientific-writing-editor/references/editorial-method.md"
+            ],
+            [
+              "Rule catalogue",
+              "skills/evidence-based-scientific-writing-editor/references/rule-catalog.csv"
+            ]
+          ]
+        },
+        {
+          "title": "Keep editorial decisions accountable",
+          "text": "For example, rules R08 and R12 ask the reviewer to separate observations from proposed mechanisms and preserve uncertainty unless further evidence supports a stronger statement. The agent surfaces issues and proposes revisions. The author owns the scientific inference and approves changes in meaning. The public evidence is the skill and rule artefacts. Comparative effects on manuscript quality have not been established."
+        }
+      ]
+    },
+    {
+      "id": "writing-method",
+      "title": "Distill Scientific Writing Method",
+      "category": "knowledge",
+      "status": "Public Codex skill",
+      "updated": "2026-08-13",
+      "summary": "A workflow for extracting reusable editorial rules from a bounded corpus and recording the evidence for each rule.",
+      "outcome": "A scaffold and validator for a source catalogue, evidence ledger and rule artefacts.",
+      "stack": [
+        "Knowledge extraction",
+        "Provenance",
+        "Python validation"
+      ],
+      "repo": "distill-scientific-writing-method",
+      "revision": "d977c5486d41f8ed3246316ff082ca045a81a2ef",
+      "related": "writing-editor",
+      "sections": [
+        {
+          "title": "Document where a writing rule comes from",
+          "text": "A corpus may contain evidence from published examples, author commentary and analyst interpretation. The workflow asks the reviewer to record which kind of evidence supports a proposed rule, preserve exceptions and avoid treating stylistic patterns as universal requirements.",
+          "evidence": [
+            [
+              "Public skill specification",
+              "skills/distill-scientific-writing-method/SKILL.md"
+            ],
+            [
+              "Evidence protocol",
+              "skills/distill-scientific-writing-method/references/evidence-protocol.md"
+            ],
+            [
+              "Output contract",
+              "skills/distill-scientific-writing-method/references/output-contract.md"
+            ]
+          ]
+        },
+        {
+          "title": "Hand the method to an editor",
+          "text": "The extraction workflow produces a rule set with evidence provenance. The companion Editor applies an editorial method to a new manuscript. Scripted checks can validate the structure of the workspace. A reviewer still assesses inference strength, counterexamples and transfer to another discipline.",
+          "evidence": [
+            [
+              "Python scaffold",
+              "skills/distill-scientific-writing-method/scripts/scaffold_extraction.py"
+            ],
+            [
+              "Structural validator",
+              "skills/distill-scientific-writing-method/scripts/validate_extraction.py"
+            ]
+          ]
+        },
+        {
+          "title": "Verify the handoff files",
+          "text": "The scaffold and validator were exercised against the public version. The scaffold created the workspace and refused a repeat write over it, and the validator rejected incomplete evidence records. This checks the structure of the handoff. An author or editor must review whether the proposed rules are supported.",
+          "evidence": [
+            [
+              "Validator source",
+              "skills/distill-scientific-writing-method/scripts/validate_extraction.py"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "palette-miner",
+      "title": "Top-Journal Palette Miner",
+      "category": "knowledge",
+      "status": "Public browser tool",
+      "updated": "2026-07-16",
+      "summary": "A visualisation tool for inspecting colour roles and transferring a reviewed palette to a new scientific figure.",
+      "outcome": "A browser lab plus structured exports for reusing colour decisions beyond one figure.",
+      "stack": [
+        "Browser image analysis",
+        "Python",
+        "Scientific visualisation"
+      ],
+      "media": {
+        "file": "assets/projects/palette-inspect.png",
+        "alt": "Palette Lab Inspect interface showing extracted colour candidates and visual roles for its built-in synthetic figure",
+        "caption": "Actual Palette Lab Inspect interface using a built-in synthetic example. Transfer is available in the same public demo.",
+        "source_url": "https://guanyuzooou.github.io/top-journal-palette-miner/",
+        "license": "Capture of the owner’s public MIT-licensed interface and original synthetic example."
+      },
+      "repo": "top-journal-palette-miner",
+      "revision": "4063ff7dfe6ae9e0f3d6e72d4e6623e119f57ef9",
+      "demo": "https://guanyuzooou.github.io/top-journal-palette-miner/",
+      "sections": [
+        {
+          "title": "Inspect where colour does work",
+          "text": "Colour frequency alone does not explain a figure. The workflow separates candidate data colours, structural neutrals and emphasis. The reviewer supplies the figure context and checks suggested roles against the original graphic.",
+          "evidence": [
+            [
+              "Browser Inspect and Transfer implementation",
+              "docs/index.html"
+            ]
+          ]
+        },
+        {
+          "title": "Transfer and export",
+          "text": "The browser lab lets the user inspect a figure and review a proposed colour mapping for a new graphic. Structured palette records and CSS variables preserve the choices for reuse. The reviewer checks contrast and the intended interpretation before applying the mapping. In the built-in Transfer example, the result surfaces uncertainties such as the absence of a clear structural neutral. The reviewer can decide whether the suggested mapping is appropriate.",
+          "evidence": [
+            [
+              "Public CI run",
+              "https://github.com/GuanyuZooou/top-journal-palette-miner/actions/runs/29539382085"
+            ]
+          ]
+        },
+        {
+          "title": "Credit the source",
+          "text": "The portfolio shows the project’s original synthetic examples. The upstream project documents attribution and modifications for its separately licensed external examples.",
+          "evidence": [
+            [
+              "Third-party notices",
+              "THIRD_PARTY_NOTICES.md"
+            ]
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "file": "assets/projects/palette-gallery.png",
+          "alt": "Three original synthetic figure examples showing paired series, an ordered response and rare emphasis colours",
+          "caption": "Original project gallery with synthetic examples of different visual roles. These are design examples.",
+          "source": "examples/gallery-overview.png",
+          "license": "Original project artwork under MIT. Third-party figures are not redistributed here."
+        }
+      ]
+    },
+    {
+      "id": "career-intelligence",
+      "title": "Career Intelligence Lab",
+      "category": "innovation",
+      "status": "Local-first prototype · public demo",
+      "updated": "2026-11-26",
+      "summary": "A workbench that traces job requirements and bilingual draft language back to a candidate’s evidence.",
+      "outcome": "A public synthetic demo and a local workflow for mapping requirements, reviewing translations and drafting applications.",
+      "stack": [
+        "Node.js",
+        "Local JSON workspace",
+        "English / 简体中文"
+      ],
+      "repo": "career-intelligence-lab",
+      "revision": "bda2fed44a6452ca3a41fa8d7e9e1783dc672569",
+      "demo": "https://guanyuzooou.github.io/career-intelligence-lab/",
+      "sections": [
+        {
+          "title": "Start with proof for each requirement",
+          "text": "The core maps requirements to Direct, Transferable, Latent, Gap or Missing evidence. Stable source identifiers carry through English and Simplified Chinese, and pending or edited translations are held back from draft wording while source coverage remains visible.",
+          "evidence": [
+            [
+              "Evidence-mapping and draft logic",
+              "site/core.mjs"
+            ],
+            [
+              "Workspace contract",
+              "docs/workspace.md"
+            ]
+          ]
+        },
+        {
+          "title": "Keep the private workbench local",
+          "text": "The single-user workbench and CLI share a versioned JSON workspace with revision checks and atomic saves. The public browser demo uses a synthetic fixture. A candidate reviews mappings, source strength and translation before using a draft.",
+          "evidence": [
+            [
+              "Workspace persistence code",
+              "tools/workspace-file.mjs"
+            ]
+          ]
+        },
+        {
+          "title": "What was tested",
+          "text": "The repository includes 14 synthetic workflow tests, all passed in this review, plus a manual Chromium walkthrough covering persistence, translation and draft validation. This prototype has no hiring-outcome study or multi-user deployment.",
+          "evidence": [
+            [
+              "Workflow test source",
+              "tests/workflow.test.mjs"
+            ],
+            [
+              "Manual validation record",
+              "docs/validation-and-release.md"
+            ]
+          ]
+        }
+      ],
+      "media": {
+        "file": "assets/projects/career-evidence.png",
+        "alt": "Public Career Intelligence Lab interface showing a latent match, source evidence and a question for candidate review",
+        "caption": "Actual public demo, using synthetic candidate data. Evidence coverage indicates what can be traced to sources.",
+        "source_url": "https://guanyuzooou.github.io/career-intelligence-lab/",
+        "license": "Portfolio capture of the owner’s MIT-licensed public demo, using its synthetic fixture."
+      }
+    },
+    {
+      "id": "investment-research",
+      "title": "Personal Investment Research",
+      "category": "innovation",
+      "status": "Offline research preview",
+      "updated": "2026-11-26",
+      "summary": "A negative historical backtest led to a reproducible tool for comparing portfolio plans under declared constraints.",
+      "outcome": "A local comparison workflow with explicit assumptions, shared replay conditions and inspectable cash and units ledgers.",
+      "stack": [
+        "Python CLI",
+        "Walk-forward testing",
+        "Policy comparison"
+      ],
+      "media": {
+        "file": "assets/projects/investment-comparison.png",
+        "alt": "Recorded CLI walkthrough comparing four policies on synthetic GBP data, with a drawdown check",
+        "caption": "Recording view of the local CLI. All four policies share the same synthetic prices, deposits and modelled costs.",
+        "source": "stock_research/docs/platform/media/plan-comparison.png",
+        "license": "Project-authored media under the project’s MIT licence."
+      },
+      "repo": "personal-investment-research",
+      "revision": "4194da8bee8f9043bcd302abeb6e5faca086913d",
+      "sections": [
+        {
+          "title": "Let a negative result change the question",
+          "text": "The fixed discount-entry rule was profitable in 2 of 14 complete historical out-of-sample quarters and trailed a capital-matched buy-and-hold control in all 14. The result is specific to the tested cohort and modelled daily price fills. The study records limitations around the universe, vendor revisions, previous inspection and unknown intraday fill order.",
+          "evidence": [
+            [
+              "Historical findings and limitations",
+              "stock_research/research_v2/README.md#historical-findings"
+            ],
+            [
+              "Walk-forward procedure",
+              "stock_research/research_v2/validation.py"
+            ],
+            [
+              "Historical data provenance",
+              "stock_research/repro_data/DATA_SOURCES.md"
+            ]
+          ]
+        },
+        {
+          "title": "Compare plans on the same assumptions",
+          "text": "The current preview screens a versioned catalogue against declared constraints and can return no candidates. Its replay compares an illustrative 60/40 mix with cash, broad-equity buy-and-hold and staged contributions on identical deterministic synthetic GBP paths and costs. The fixture exercises the workflow. Market and prospective validation remain open.",
+          "evidence": [
+            [
+              "Constraint screening code",
+              "stock_research/platform/plan_screen.py"
+            ],
+            [
+              "Comparison implementation",
+              "stock_research/platform/compare_plan.py"
+            ],
+            [
+              "Regression tests",
+              "stock_research/tests/test_platform_compare_plan.py"
+            ],
+            [
+              "Recorded CLI walkthrough",
+              "stock_research/docs/platform/media/plan-comparison-demo.mp4"
+            ]
+          ]
+        },
+        {
+          "title": "Decisions and collaboration",
+          "text": "Guanyu set the research goals, paper-only scope and shared baselines, and retained the negative historical result. ChatGPT and Codex assisted with source research, protocol design, implementation and testing. The output helps inspect assumptions. It gives no investment recommendation or trade instruction.",
+          "evidence": [
+            [
+              "Development and contribution record",
+              "stock_research/docs/platform/development-record.md"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-for-science",
+      "title": "AI for Science",
+      "category": "innovation",
+      "status": "Exploratory direction",
+      "summary": "Exploring how physical knowledge and reliable data can guide learning tasks for materials analysis.",
+      "outcome": "An emerging research direction framed around questions, data provenance and evaluation.",
+      "stack": [
+        "Scientific ML",
+        "Research design"
+      ],
+      "legacy": true
+    }
+  ]
+}

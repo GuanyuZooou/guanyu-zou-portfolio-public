@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08131c">
+  <title>Top-Journal Palette Miner | Guanyu Zou</title>
+  <meta name="description" content="A visualisation tool for inspecting colour roles and transferring a reviewed palette to a new scientific figure.">
+  <link rel="canonical" href="https://guanyuzooou.github.io/guanyu-zou-portfolio-public/palette-miner.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portfolio-v2.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Guanyu Zou · Research &amp; Technology">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Top-Journal Palette Miner | Guanyu Zou">
+  <meta property="og:description" content="A visualisation tool for inspecting colour roles and transferring a reviewed palette to a new scientific figure.">
+  <meta property="og:url" content="https://guanyuzooou.github.io/guanyu-zou-portfolio-public/palette-miner.html">
+  <meta property="og:image" content="https://guanyuzooou.github.io/guanyu-zou-portfolio-public/assets/social-preview-v2.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Guanyu Zou, research and technology portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Top-Journal Palette Miner | Guanyu Zou">
+  <meta name="twitter:description" content="A visualisation tool for inspecting colour roles and transferring a reviewed palette to a new scientific figure.">
+  <meta name="twitter:image" content="https://guanyuzooou.github.io/guanyu-zou-portfolio-public/assets/social-preview-v2.png">
+  <script src="portfolio-v2.js" defer></script>
+</head>
+<body class="v2-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="v2-header">
+  <div class="v2-wrap v2-header-inner">
+    <a class="v2-brand" href="index.html" aria-label="Guanyu Zou home">
+      <span class="v2-brand-mark" aria-hidden="true">GZ</span>
+      <span><strong>Guanyu Zou</strong><small>SCIENCE × APPLICATION</small></span>
+    </a>
+    <button type="button" class="v2-menu-toggle" aria-expanded="false" aria-controls="portfolio-navigation" hidden>Menu</button>
+    <nav id="portfolio-navigation" class="v2-nav" aria-label="Main navigation"><a href="index.html#work">Projects</a>
+<a href="index.html#approach">Method</a>
+<a href="index.html#about">About</a>
+<a href="index.html#contact">Contact</a></nav>
+  </div>
+</header>
+<main id="main-content" tabindex="-1">
+<header class="v2-case-header">
+  <div class="v2-wrap">
+    <a class="v2-text-link" href="index.html#knowledge">AI &amp; Knowledge Engineering</a>
+    <p class="v2-kicker">Public browser tool</p>
+    <h1>Top-Journal Palette Miner</h1>
+    <p class="v2-lead">A visualisation tool for inspecting colour roles and transferring a reviewed palette to a new scientific figure.</p>
+    <ul class="v2-tags" aria-label="Technologies and methods"><li>Browser image analysis</li><li>Python</li><li>Scientific visualisation</li></ul>
+    <div class="v2-actions"><a class="v2-button v2-button-primary" href="https://guanyuzooou.github.io/top-journal-palette-miner/">Open live demo</a><a class="v2-button" href="https://github.com/GuanyuZooou/top-journal-palette-miner">GitHub repository</a></div>
+  </div>
+</header>
+<div class="v2-wrap v2-case-content">
+  <aside class="v2-case-aside"><p class="v2-kicker">In this case</p><nav aria-label="Case sections"><ul><li><a href="#inspect-where-colour-does-work">Inspect where colour does work</a></li><li><a href="#transfer-and-export">Transfer and export</a></li><li><a href="#credit-the-source">Credit the source</a></li></ul></nav>
+    <p class="v2-reviewed">Source snapshot <time datetime="2026-07-16">2026-07-16</time></p>
+  </aside>
+  <div class="v2-case-main">
+    <p class="v2-case-outcome">A browser lab plus structured exports for reusing colour decisions beyond one figure.</p>
+    <figure class="v2-case-figure">
+  <a href="assets/projects/palette-inspect.png" aria-label="Open full-size image: Palette Lab Inspect interface showing extracted colour candidates and visual roles for its built-in synthetic figure"><img src="assets/projects/palette-inspect.png" alt="Palette Lab Inspect interface showing extracted colour candidates and visual roles for its built-in synthetic figure" loading="lazy" decoding="async"></a>
+  <figcaption>Actual Palette Lab Inspect interface using a built-in synthetic example. Transfer is available in the same public demo.
+    <span><a href="assets/projects/palette-inspect.png">Open full-size image</a> <span aria-hidden="true">·</span> <a href="https://guanyuzooou.github.io/top-journal-palette-miner/">Source</a></span>
+  </figcaption>
+</figure>
+    <section class="v2-case-section" id="inspect-where-colour-does-work">
+  <h2>Inspect where colour does work</h2>
+  <p>Colour frequency alone does not explain a figure. The workflow separates candidate data colours, structural neutrals and emphasis. The reviewer supplies the figure context and checks suggested roles against the original graphic.</p>
+  <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/top-journal-palette-miner/blob/4063ff7dfe6ae9e0f3d6e72d4e6623e119f57ef9/docs/index.html">Browser Inspect and Transfer implementation</a></li></ul>
+</section><section class="v2-case-section" id="transfer-and-export">
+  <h2>Transfer and export</h2>
+  <p>The browser lab lets the user inspect a figure and review a proposed colour mapping for a new graphic. Structured palette records and CSS variables preserve the choices for reuse. The reviewer checks contrast and the intended interpretation before applying the mapping. In the built-in Transfer example, the result surfaces uncertainties such as the absence of a clear structural neutral. The reviewer can decide whether the suggested mapping is appropriate.</p>
+  <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/top-journal-palette-miner/actions/runs/29539382085">Public CI run</a></li></ul>
+</section><section class="v2-case-section" id="credit-the-source">
+  <h2>Credit the source</h2>
+  <p>The portfolio shows the project’s original synthetic examples. The upstream project documents attribution and modifications for its separately licensed external examples.</p>
+  <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/top-journal-palette-miner/blob/4063ff7dfe6ae9e0f3d6e72d4e6623e119f57ef9/THIRD_PARTY_NOTICES.md">Third-party notices</a></li></ul>
+</section>
+    <figure class="v2-case-figure">
+  <a href="assets/projects/palette-gallery.png" aria-label="Open full-size image: Three original synthetic figure examples showing paired series, an ordered response and rare emphasis colours"><img src="assets/projects/palette-gallery.png" alt="Three original synthetic figure examples showing paired series, an ordered response and rare emphasis colours" loading="lazy" decoding="async"></a>
+  <figcaption>Original project gallery with synthetic examples of different visual roles. These are design examples.
+    <span><a href="assets/projects/palette-gallery.png">Open full-size image</a> <span aria-hidden="true">·</span> <a href="https://github.com/GuanyuZooou/top-journal-palette-miner/blob/4063ff7dfe6ae9e0f3d6e72d4e6623e119f57ef9/examples/gallery-overview.png">Source</a></span>
+  </figcaption>
+</figure>
+
+  </div>
+</div>
+</main>
+<footer class="v2-footer">
+  <div class="v2-wrap"><span>Guanyu Zou <span class="v2-footer-separator">·</span> SCIENCE × APPLICATION</span>
+    <nav aria-label="Contact links"><a href="mailto:guanyuuzouuu@outlook.com">Email</a>
+<a href="https://www.linkedin.com/in/guanyu-zou/">LinkedIn</a>
+<a href="https://github.com/GuanyuZooou">GitHub</a></nav>
+  </div>
+</footer>
+</body>
+</html>
