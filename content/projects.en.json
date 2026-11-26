@@ -31,7 +31,7 @@
       "category": "research",
       "status": "Benchmark study",
       "updated": "2026-11-26",
-      "summary": "An automated workflow that checks OpenFOAM heat-transfer simulations against analytical solutions and energy balances.",
+      "summary": "I built an automated workflow to check OpenFOAM heat-transfer simulations against analytical solutions and energy balances.",
       "outcome": "On the same coarse room model, continuing the run with a stricter stopping rule cut the wall energy imbalance from 7.96% to 0.918%.",
       "stack": [
         "OpenFOAM 13",
@@ -347,7 +347,7 @@
       "category": "innovation",
       "status": "Prototype with public demo",
       "updated": "2026-11-26",
-      "summary": "A bilingual tool for researchers and engineers to track job opportunities, match their experience to requirements and draft applications.",
+      "summary": "I built a bilingual tool to help researchers and engineers track job opportunities, match their experience to requirements and draft applications.",
       "outcome": "The public demo shows where a match comes from and which points need checking. The local workspace supports drafting in English and Simplified Chinese.",
       "stack": [
         "Node.js",
