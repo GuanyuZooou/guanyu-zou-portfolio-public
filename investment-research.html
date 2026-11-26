@@ -57,7 +57,7 @@
     <p class="v2-reviewed">Source version <time datetime="2026-11-26">2026-11-26</time></p>
   </aside>
   <div class="v2-case-main">
-    <p class="v2-case-outcome">The offline tool screens a catalogue against user constraints. The plan comparison keeps a record of cash and holdings.</p>
+    <p class="v2-case-outcome">The offline tool filters options by the user’s constraints and records cash and holdings so the plan comparison can be checked.</p>
     <figure class="v2-case-figure">
   <a href="assets/projects/investment-comparison.png" aria-label="Open full-size image: Offline comparison of four investment plans using simulated pound prices, with a drawdown check"><img src="assets/projects/investment-comparison.png" alt="Offline comparison of four investment plans using simulated pound prices, with a drawdown check" loading="lazy" decoding="async"></a>
   <figcaption>The recorded demo compares four plans using the same simulated prices, deposits and costs.
@@ -66,7 +66,7 @@
 </figure>
     <section class="v2-case-section" id="let-a-negative-result-change-the-question">
   <h2>What the historical test showed</h2>
-  <p>I set out to test a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters held out for testing. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had been inspected before the test, and daily prices do not show which price was reached first.</p>
+  <p>I tested a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters held out for testing. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had already been inspected, and daily prices do not show which price was reached first.</p>
   <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/research_v2/README.md#historical-findings">Historical results and limits</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/research_v2/validation.py">How the quarterly tests work</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/repro_data/DATA_SOURCES.md">Historical data sources</a></li></ul>
 </section><section class="v2-case-section" id="compare-plans-on-the-same-assumptions">
   <h2>Compare plans under the same conditions</h2>
@@ -74,7 +74,7 @@
   <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/platform/plan_screen.py">Screening code</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/platform/compare_plan.py">Comparison code</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/tests/test_platform_compare_plan.py">Automated tests</a></li><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/docs/platform/media/plan-comparison-demo.mp4">Recorded walkthrough</a></li></ul>
 </section><section class="v2-case-section" id="decisions-and-collaboration">
   <h2>How I worked with AI on the project</h2>
-  <p>I set the research question, asked for a common basis for comparison and kept the poor historical result in the record. ChatGPT and Codex helped with source research, protocol design, implementation and testing. The output is for comparing assumptions in a research setting. It gives no investment recommendation or trade instruction.</p>
+  <p>I set the research question, asked for a common basis for comparison and kept the poor historical result in the record. ChatGPT and Codex helped find sources, design the tests, write code and check the results. The tool compares assumptions for research and gives no investment recommendation or trade instruction.</p>
   <ul class="v2-evidence-links"><li><a href="https://github.com/GuanyuZooou/personal-investment-research/blob/4194da8bee8f9043bcd302abeb6e5faca086913d/stock_research/docs/platform/development-record.md">Project decisions and contributions</a></li></ul>
 </section>
 

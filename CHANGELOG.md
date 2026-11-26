@@ -1,5 +1,11 @@
 # Changelog
 
+## Portfolio v2 · Editorial alignment
+
+- Tightens the homepage introduction, doctoral research and About copy.
+- Describes the six stages of How I work in transferable terms and keeps the existing project examples.
+- Separates featured project summaries from detailed methods, results and limitations in the case studies.
+
 ## Portfolio v2 · Targeted editorial refinement
 
 - Refines the Selected Projects introduction and describes both writing skills by the work they support.

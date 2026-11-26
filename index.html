@@ -47,7 +47,7 @@
     <div class="v2-hero-copy">
       <p class="v2-kicker">Research &amp; engineering portfolio</p>
       <h1>From complex questions to <em>tested solutions.</em></h1>
-      <p class="v2-lead">I’m a computational materials researcher at The University of Manchester. I build engineering models, automate research workflows and use AI to develop tools.</p>
+      <p class="v2-lead">I’m a computational materials researcher at The University of Manchester. I use scientific models to answer engineering questions and build software with AI assistance to help researchers automate tasks and check results.</p>
       <div class="v2-actions">
         <a class="v2-button v2-button-primary" href="#work">Explore projects</a>
         <a class="v2-button" href="#doctoral-research">Doctoral research</a>
@@ -82,8 +82,8 @@
   <div class="v2-feature-image"><img src="assets/projects/openfoam-room.png" alt="Wall heat flows and their net total as the OpenFOAM room run continues" loading="lazy" decoding="async"></div>
   <div class="v2-feature-body">
     <h3>OpenFOAM Thermal Verification</h3>
-    <p class="v2-feature-problem">Checks OpenFOAM heat-transfer simulations against analytical solutions and energy balances.</p>
-    <p class="v2-feature-proof">A heat-balance check caught an imbalance after the solver had stopped. A stricter stopping rule brought it within tolerance.</p>
+    <p class="v2-feature-problem">Checks whether OpenFOAM heat-transfer simulations agree with analytical solutions and conserve energy.</p>
+    <p class="v2-feature-proof">The room case documents a heat imbalance after the solver met its stopping criteria.</p>
     <div class="v2-feature-actions"><a href="openfoam.html" aria-label="Case study: OpenFOAM Thermal Verification">Case study</a></div>
   </div>
 </article>
@@ -91,8 +91,8 @@
   <div class="v2-feature-image"><img src="assets/projects/career-evidence.png" alt="Career Intelligence Lab demo showing a job requirement, a possible match, its source and a question to check" loading="lazy" decoding="async"></div>
   <div class="v2-feature-body">
     <h3>Career Intelligence Lab</h3>
-    <p class="v2-feature-problem">Match your experience to job requirements and start a draft in English or Simplified Chinese.</p>
-    <p class="v2-feature-proof">Try the matching workflow with fictional candidate data in the public demo.</p>
+    <p class="v2-feature-problem">Helps researchers and engineers match their experience to job requirements and draft applications in English or Simplified Chinese.</p>
+    <p class="v2-feature-proof">The public demo uses fictional data to show where matches come from and which ones need review.</p>
     <div class="v2-feature-actions"><a href="career-intelligence.html" aria-label="Case study: Career Intelligence Lab">Case study</a><a href="https://guanyuzooou.github.io/career-intelligence-lab/" aria-label="Live demo: Career Intelligence Lab">Live demo</a></div>
   </div>
 </article>
@@ -100,8 +100,8 @@
   <div class="v2-feature-image"><img src="assets/projects/palette-inspect.png" alt="Palette Lab Inspect interface showing extracted colour candidates and visual roles for its built-in synthetic figure" loading="lazy" decoding="async"></div>
   <div class="v2-feature-body">
     <h3>Top-Journal Palette Miner</h3>
-    <p class="v2-feature-problem">See how colours are used in a scientific figure and review suggestions for a new chart.</p>
-    <p class="v2-feature-proof">Export the suggested palette as JSON, CSS or a report.</p>
+    <p class="v2-feature-problem">Analyses colours in a scientific figure and suggests a palette for a new chart.</p>
+    <p class="v2-feature-proof">The browser demo shows how to review colour roles and check contrast using sample figures.</p>
     <div class="v2-feature-actions"><a href="palette-miner.html" aria-label="Case study: Top-Journal Palette Miner">Case study</a><a href="https://guanyuzooou.github.io/top-journal-palette-miner/" aria-label="Live demo: Top-Journal Palette Miner">Live demo</a></div>
   </div>
 </article></div>
@@ -109,20 +109,20 @@
 
 <section class="v2-wrap v2-doctoral" id="doctoral-research" aria-labelledby="doctoral-research-heading">
   <h2 id="doctoral-research-heading">Doctoral research</h2>
-  <p class="v2-research-question">How does fibre structure affect heat loss, and what can that tell us about insulation design?</p>
-  <p>I use fibre-scale models to understand how heat moves through the material, then estimate its overall thermal conductivity for furnace heat-loss calculations. I automate model setup and data extraction to compare simulations consistently. In a separate study, I tested how well CT-like images capture fibre structure.</p>
+  <p class="v2-research-question">How does fibre structure affect heat loss through insulation?</p>
+  <p>I use fibre-scale simulations to study how heat moves through insulation. I use their results to estimate the material’s thermal conductivity for furnace heat-loss calculations and insulation design. A separate imaging study tests how reliably we can measure the fibre structure.</p>
   <ul>
     <li>
       <h3><a href="fem.html">FEM · Model heat transfer through fibres</a></h3>
-      <p>I build 3D fibre networks in COMSOL and model how heat moves through the fibres by conduction and between surfaces by radiation.</p>
+      <p>I build 3D fibre networks in COMSOL to study conduction through the material and radiation between surfaces.</p>
     </li>
     <li>
       <h3><a href="ml.html">Scientific ML · Estimate thermal conductivity</a></h3>
-      <p>I compare and test simpler models that can estimate conductivity without rerunning a full simulation. These estimates can inform furnace heat-loss calculations and insulation design.</p>
+      <p>I test simpler models that estimate thermal conductivity without rerunning the full simulation.</p>
     </li>
     <li>
       <h3><a href="imaging.html">3D imaging · Test image-based measurements</a></h3>
-      <p>I compare measurements from controlled CT-like volumes with reference structures to see how resolution and sampling affect estimates of porosity, fibre direction and connectivity.</p>
+      <p>I compare measurements from CT-like images with reference values to see how resolution and sampling affect estimates of porosity, fibre direction and connectivity.</p>
     </li>
   </ul>
 </section>
@@ -143,19 +143,19 @@
   <span class="v2-project-state">Benchmark study</span>
 </li>
 <li class="v2-project-row">
-  <div><h4><a href="fem.html">3D FEM &amp; thermal modelling</a></h4><p>I built COMSOL models of fibre networks to study how heat moves through fibrous materials.</p></div>
+  <div><h4><a href="fem.html">3D FEM &amp; thermal modelling</a></h4><p>I built COMSOL models of fibre networks to study how heat moves through insulation.</p></div>
   <span class="v2-project-state">Doctoral research</span>
 </li>
 <li class="v2-project-row">
-  <div><h4><a href="ml.html">Scientific ML &amp; surrogate modelling</a></h4><p>I built and tested models that estimate thermal conductivity for engineering calculations.</p></div>
+  <div><h4><a href="ml.html">Scientific ML &amp; surrogate modelling</a></h4><p>I built and tested models that estimate thermal conductivity for engineering calculations without rerunning full simulations.</p></div>
   <span class="v2-project-state">Doctoral research</span>
 </li>
 <li class="v2-project-row">
-  <div><h4><a href="imaging.html">3D imaging &amp; structural analysis</a></h4><p>I processed 3D images to measure porosity, fibre orientation and connectivity, and checked the measurements against reference structures.</p></div>
+  <div><h4><a href="imaging.html">3D imaging &amp; structural analysis</a></h4><p>I tested how image resolution and sampling affect measurements of porosity, fibre orientation and connectivity in CT-like volumes.</p></div>
   <span class="v2-project-state">Doctoral research</span>
 </li>
 <li class="v2-project-row">
-  <div><h4><a href="tools.html">Scientific tools &amp; workflows</a></h4><p>I use scripting to automate geometry, simulation runs, data checks and reporting.</p></div>
+  <div><h4><a href="tools.html">Scientific tools &amp; workflows</a></h4><p>I write scripts to build simulation geometry, run batches and organise results. I also build tools for working with figures and manuscripts.</p></div>
   <span class="v2-project-state">Technical practice</span>
 </li></ul>
 </section>
@@ -189,7 +189,7 @@
     <p>A career tool, an investment research experiment and early ideas for AI in materials science.</p>
   </div>
   <ul id="innovation-projects"><li class="v2-project-row">
-  <div><h4><a href="career-intelligence.html">Career Intelligence Lab</a></h4><p>I built a bilingual tool to help researchers and engineers track job opportunities, match their experience to requirements and draft applications.</p></div>
+  <div><h4><a href="career-intelligence.html">Career Intelligence Lab</a></h4><p>I built a bilingual tool for researchers and engineers to track vacancies, match their experience to requirements and draft applications.</p></div>
   <span class="v2-project-state">Prototype with public demo</span>
 </li>
 <li class="v2-project-row">
@@ -197,7 +197,7 @@
   <span class="v2-project-state">Offline research preview</span>
 </li>
 <li class="v2-project-row">
-  <div><h4><a href="ai-for-science.html">AI for materials research</a></h4><p>I am exploring how physics and carefully checked data can improve machine learning for materials research.</p></div>
+  <div><h4><a href="ai-for-science.html">AI for materials research</a></h4><p>I’m exploring how knowledge of materials can guide the choice of data, inputs and tests for machine learning.</p></div>
   <span class="v2-project-state">Exploratory direction</span>
 </li></ul>
 </section>
@@ -206,14 +206,14 @@
 </section>
 
 <section class="v2-section v2-wrap v2-method-section" id="approach">
-  <div class="v2-section-head"><h2>How I work</h2><p>I start with a question I can test and share the steps so someone else can follow them.</p></div>
+  <div class="v2-section-head"><h2>How I work</h2><p>I use these stages to develop models and software that others can use.</p></div>
   <ol class="v2-method">
-    <li><h3>Identify</h3><p>Work out what needs deciding and what would make a fair comparison.</p><a href="investment-research.html">Why I changed the investment study</a></li>
-    <li><h3>Investigate</h3><p>Go back to the original sources and look for examples that challenge the claim.</p><a href="writing-method.html">How I derive writing rules</a></li>
-    <li><h3>Design</h3><p>Show which part of a person’s experience supports each job requirement.</p><a href="career-intelligence.html">See how the career tool matches experience</a></li>
-    <li><h3>Build</h3><p>Decide what a tool needs to do, use AI to help build it and test it against the original need.</p><a href="investment-research.html#decisions-and-collaboration">Who did what on the investment project</a></li>
-    <li><h3>Verify</h3><p>Check that heat supplied to the model matches the heat leaving it plus any change in stored energy.</p><a href="openfoam.html">See the OpenFOAM checks</a></li>
-    <li><h3>Transfer</h3><p>Export a colour scheme that someone can apply to another figure.</p><a href="palette-miner.html">See how Palette Miner exports a scheme</a></li>
+    <li><h3>Identify</h3><p>Define the problem, who it matters to and what a useful result would look like.</p><a href="investment-research.html">Why I changed the investment study</a></li>
+    <li><h3>Investigate</h3><p>Review the available evidence and identify which data or assumptions need checking.</p><a href="writing-method.html">How I derive writing rules</a></li>
+    <li><h3>Design</h3><p>Choose a model or workflow that fits the question, the data and how the result will be used.</p><a href="career-intelligence.html">See how the career tool matches experience</a></li>
+    <li><h3>Build</h3><p>Build a working version, record the main choices and review any code written with AI assistance.</p><a href="investment-research.html#decisions-and-collaboration">Who did what on the investment project</a></li>
+    <li><h3>Verify</h3><p>Compare results with independent checks or data and document where the method can be relied on.</p><a href="openfoam.html">See the OpenFOAM checks</a></li>
+    <li><h3>Transfer</h3><p>Share the method with enough explanation and examples for someone else to use it.</p><a href="palette-miner.html">See how Palette Miner exports a scheme</a></li>
   </ol>
 </section>
 
@@ -221,25 +221,24 @@
   <div class="v2-wrap v2-about-grid">
     <div><p class="v2-kicker">About</p><h2>I’m Guanyu Zou</h2></div>
     <div class="v2-about-copy">
-      <p class="v2-lead">I started in polymer materials and experimental research before moving into computational modelling. I like learning how a problem works before deciding what to build.</p>
-      <p>I enjoy getting to grips with unfamiliar problems. I start with a small experiment and share what I learn. AI helps me try ideas and write code. I decide what to test and what the results support.</p>
+      <p class="v2-lead">I began with experimental research on polymers before moving into computational modelling.</p>
+      <p>I use AI to explore ideas and write code. I decide what to test and how to interpret the results.</p>
       <p class="v2-viva"><strong>PhD viva passed with minor corrections on 20 November 2026.</strong> Currently completing thesis corrections.</p>
-      <p>I’m interested in scientific software and engineering roles where I can build tools and help people use them.</p>
     </div>
     <section class="v2-collaboration" id="collaboration" aria-labelledby="collaboration-heading">
       <h3 id="collaboration-heading">Making technology useful to others</h3>
       <ul>
         <li>
           <h4>Industry collaboration</h4>
-          <p>I used chromatography to compare samples and helped write a technical report for an industry-linked research project. During my PhD, I discussed material properties and modelling assumptions with experimental researchers.</p>
+          <p>I used chromatography to compare samples and helped write a report for an industry-linked study. During my PhD, I discussed material properties and modelling assumptions with experimental researchers.</p>
         </li>
         <li>
           <h4>Technical training and support</h4>
-          <p>I designed and ran introductory COMSOL and Mathematica sessions, helped MSc students with modelling under academic supervision, and worked with technicians to troubleshoot undergraduate experiments.</p>
+          <p>I designed and ran introductory COMSOL and Mathematica sessions, supported MSc modelling under academic supervision and worked with technicians to troubleshoot undergraduate experiments.</p>
         </li>
         <li>
           <h4>Building for users</h4>
-          <p>I built <a href="palette-miner.html">Palette Miner</a> to analyse colours in scientific figures. A colleague’s feedback helped me improve how it transfers a palette to a new figure. I also built a file-transfer workflow to support a fellow researcher’s high-throughput computing work.</p>
+          <p>I built <a href="palette-miner.html">Palette Miner</a> to analyse figure colours and refined its palette transfer after a colleague’s feedback. I also built a file-transfer workflow for a fellow researcher’s high-throughput computing work.</p>
         </li>
       </ul>
     </section>

@@ -50,7 +50,7 @@
       "sections": [
         {
           "title": "Why check the energy balance?",
-          "text": "The workflow checks the mesh and records how the solver converges. It then compares temperatures and heat flows with independent calculations. In the room radiation model, the solver met its stopping criteria while the wall energy imbalance was still above the study’s 5% tolerance.",
+          "text": "The workflow checks the mesh, records how the solver converges and compares results with independent calculations. In the room radiation model, the solver met its stopping criteria while the wall energy imbalance still exceeded the study’s 5% tolerance.",
           "evidence": [
             [
               "Verification report",
@@ -102,8 +102,8 @@
         "license": "Project-authored public figure. See upstream OpenFOAM attribution in THIRD_PARTY.md."
       },
       "featured_copy": {
-        "problem": "Checks OpenFOAM heat-transfer simulations against analytical solutions and energy balances.",
-        "proof": "A heat-balance check caught an imbalance after the solver had stopped. A stricter stopping rule brought it within tolerance."
+        "problem": "Checks whether OpenFOAM heat-transfer simulations agree with analytical solutions and conserve energy.",
+        "proof": "The room case documents a heat imbalance after the solver met its stopping criteria."
       }
     },
     {
@@ -111,7 +111,7 @@
       "title": "3D FEM & thermal modelling",
       "category": "research",
       "status": "Doctoral research",
-      "summary": "I built COMSOL models of fibre networks to study how heat moves through fibrous materials.",
+      "summary": "I built COMSOL models of fibre networks to study how heat moves through insulation.",
       "outcome": "The workflow creates repeatable geometries and checks that simulation results can be compared.",
       "stack": [
         "COMSOL",
@@ -125,8 +125,8 @@
       "title": "Scientific ML & surrogate modelling",
       "category": "research",
       "status": "Doctoral research",
-      "summary": "I built and tested models that estimate thermal conductivity for engineering calculations.",
-      "outcome": "Grouped and held-out tests check how the models behave away from the conditions used to fit them.",
+      "summary": "I built and tested models that estimate thermal conductivity for engineering calculations without rerunning full simulations.",
+      "outcome": "Grouped cross-validation keeps related runs together. Separate hold-out tests check predictions under unseen conditions.",
       "stack": [
         "Python",
         "Grouped validation",
@@ -139,7 +139,7 @@
       "title": "3D imaging & structural analysis",
       "category": "research",
       "status": "Doctoral research",
-      "summary": "I processed 3D images to measure porosity, fibre orientation and connectivity, and checked the measurements against reference structures.",
+      "summary": "I tested how image resolution and sampling affect measurements of porosity, fibre orientation and connectivity in CT-like volumes.",
       "outcome": "The workflow shows which measurements can be compared reliably under different imaging and processing choices.",
       "stack": [
         "3D imaging",
@@ -153,7 +153,7 @@
       "title": "Scientific tools & workflows",
       "category": "research",
       "status": "Technical practice",
-      "summary": "I use scripting to automate geometry, simulation runs, data checks and reporting.",
+      "summary": "I write scripts to build simulation geometry, run batches and organise results. I also build tools for working with figures and manuscripts.",
       "outcome": "Documented settings help me repeat a run and find where a difference began.",
       "stack": [
         "COMSOL Java API",
@@ -169,7 +169,7 @@
       "status": "Public Codex skill",
       "updated": "2026-08-13",
       "summary": "A reusable AI skill that helps researchers structure scientific arguments, organise evidence and revise manuscripts.",
-      "outcome": "The Editor checks whether each claim follows from the results and helps plan the order of figures and arguments.",
+      "outcome": "The Editor reviews claims against the supplied results and helps place figures where they support the argument.",
       "stack": [
         "Codex skill",
         "Scientific editing",
@@ -181,7 +181,7 @@
       "sections": [
         {
           "title": "Review a draft or plan a paper",
-          "text": "The Editor reads the results and manuscript before suggesting changes. It can help decide what a paper should claim, where each figure belongs and what to revise in a draft. Its public guide lists 14 rules and states the confidence behind each one.",
+          "text": "Before suggesting changes, the Editor reads the draft and supporting results. Its public guide sets out 14 rules and gives a confidence level for each.",
           "evidence": [
             [
               "Skill instructions",
@@ -337,8 +337,8 @@
         }
       ],
       "featured_copy": {
-        "problem": "See how colours are used in a scientific figure and review suggestions for a new chart.",
-        "proof": "Export the suggested palette as JSON, CSS or a report."
+        "problem": "Analyses colours in a scientific figure and suggests a palette for a new chart.",
+        "proof": "The browser demo shows how to review colour roles and check contrast using sample figures."
       }
     },
     {
@@ -347,7 +347,7 @@
       "category": "innovation",
       "status": "Prototype with public demo",
       "updated": "2026-11-26",
-      "summary": "I built a bilingual tool to help researchers and engineers track job opportunities, match their experience to requirements and draft applications.",
+      "summary": "I built a bilingual tool for researchers and engineers to track vacancies, match their experience to requirements and draft applications.",
       "outcome": "The public demo shows where a match comes from and which points need checking. The local workspace supports drafting in English and Simplified Chinese.",
       "stack": [
         "Node.js",
@@ -360,7 +360,7 @@
       "sections": [
         {
           "title": "Match experience to the role",
-          "text": "The tool distinguishes direct and transferable matches from possible matches that need a check, as well as gaps and missing information. It keeps the same source references in English and Simplified Chinese. New or edited translations stay out of the draft until reviewed. You can still see which original sources support a match.",
+          "text": "The tool separates direct and transferable matches from possible matches, gaps and missing information. Each match keeps its source reference in English and Simplified Chinese. New or edited translations stay out of drafts until reviewed.",
           "evidence": [
             [
               "Matching and draft code",
@@ -386,7 +386,7 @@
         },
         {
           "title": "What was tested",
-          "text": "All 14 automated tests passed using fictional data. A browser walkthrough also checked saving, translation review and draft checks. Hiring outcomes and multi-user use remain open questions.",
+          "text": "All 14 automated tests passed using fictional data. A browser walkthrough also checked saving, reviewing translations and preparing drafts. Hiring outcomes and multi-user use remain open questions.",
           "evidence": [
             [
               "Automated tests",
@@ -408,8 +408,8 @@
         "license": "Portfolio capture of the owner’s MIT-licensed public demo, using its synthetic fixture."
       },
       "featured_copy": {
-        "problem": "Match your experience to job requirements and start a draft in English or Simplified Chinese.",
-        "proof": "Try the matching workflow with fictional candidate data in the public demo."
+        "problem": "Helps researchers and engineers match their experience to job requirements and draft applications in English or Simplified Chinese.",
+        "proof": "The public demo uses fictional data to show where matches come from and which ones need review."
       }
     },
     {
@@ -419,7 +419,7 @@
       "status": "Offline research preview",
       "updated": "2026-11-26",
       "summary": "A Python research tool for comparing investment plans under the same assumptions, developed after a trading rule performed poorly on historical data.",
-      "outcome": "The offline tool screens a catalogue against user constraints. The plan comparison keeps a record of cash and holdings.",
+      "outcome": "The offline tool filters options by the user’s constraints and records cash and holdings so the plan comparison can be checked.",
       "stack": [
         "Python command-line tool",
         "Historical testing",
@@ -437,7 +437,7 @@
       "sections": [
         {
           "title": "What the historical test showed",
-          "text": "I set out to test a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters held out for testing. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had been inspected before the test, and daily prices do not show which price was reached first.",
+          "text": "I tested a rule for buying stocks after a price drop. The historical simulation made a profit in 2 of 14 complete quarters held out for testing. It lagged a buy-and-hold comparison with matched capital in all 14. The result depends on which stocks were included and how orders were simulated. Data vendors may revise records, some data had already been inspected, and daily prices do not show which price was reached first.",
           "evidence": [
             [
               "Historical results and limits",
@@ -479,7 +479,7 @@
         },
         {
           "title": "How I worked with AI on the project",
-          "text": "I set the research question, asked for a common basis for comparison and kept the poor historical result in the record. ChatGPT and Codex helped with source research, protocol design, implementation and testing. The output is for comparing assumptions in a research setting. It gives no investment recommendation or trade instruction.",
+          "text": "I set the research question, asked for a common basis for comparison and kept the poor historical result in the record. ChatGPT and Codex helped find sources, design the tests, write code and check the results. The tool compares assumptions for research and gives no investment recommendation or trade instruction.",
           "evidence": [
             [
               "Project decisions and contributions",
@@ -495,7 +495,7 @@
       "title": "AI for materials research",
       "category": "innovation",
       "status": "Exploratory direction",
-      "summary": "I am exploring how physics and carefully checked data can improve machine learning for materials research.",
+      "summary": "I’m exploring how knowledge of materials can guide the choice of data, inputs and tests for machine learning.",
       "outcome": "The work is at the stage of defining questions, data requirements and evaluation plans.",
       "stack": [
         "Scientific ML",
