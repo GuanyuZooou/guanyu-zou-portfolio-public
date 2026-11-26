@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2 · Editorial review candidate
+
+- Rewrites the homepage, project catalogue and all case studies in plain British English.
+- Explains how the doctoral research relates fibre structure to furnace heat loss and insulation design. Adds concrete examples of training, collaboration and technical support to About.
+- Keeps project URLs, saved section links, case layout, figure files and Research Disclosure. Updates the verifier to check these features while allowing editorial changes.
+
 ## Doctoral research thread · Review candidate
 
 - Connects the three doctoral cases around how fibre microstructure can inform heat-transfer predictions.

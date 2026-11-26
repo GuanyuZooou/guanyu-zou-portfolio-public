@@ -31,6 +31,7 @@ TEXT_TYPES = {".css", ".html", ".js", ".json", ".md", ".py", ".svg", ".txt", ".x
 LEAK_PATTERNS = {
     "local filesystem reference": r"file:\/\/|(?:[A-Z]:[\\/])(?:Users|workspace|temp)[\\/]|\/(?:home|Users|private|mnt|workspace)\/[\w.-]+|Dropbox[\\/]",
     "old private portfolio or asset reference": r"portfolio-dev|V3_with_Codex_Brief|Privacy_Review_2026|assets/(?:research|thumbnails)/",
+    "private CV or review reference": r"Guanyu_Zou_AVID_CV|Portfolio_v22_Private_Review",
     "credential or signed URL": r"-----BEGIN (?:[A-Z]+ )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{30,}|[?&](?:X-Amz-Signature|access_token)=",
 }
 MAIN = re.compile(r"<main\b[^>]*>(.*?)</main>", re.IGNORECASE | re.DOTALL)
@@ -270,8 +271,22 @@ def verify():
     for name in sorted(baseline_cases):
         old_body = MAIN.search(git("show", f"{BASELINE}:{name}"))
         new_body = MAIN.search(texts.get(name, ""))
-        if not old_body or not new_body or old_body.group(1).strip() != new_body.group(1).strip():
-            issues.append(f"{name}: public research body differs from {BASELINE}")
+        if not old_body or not new_body:
+            issues.append(f"{name}: missing case-study body")
+            continue
+        protected = {"id", "class", "href", "src"}
+        old_structure = [
+            (tag, {key: value for key, value in attrs.items() if key in protected})
+            for tag, attrs in Page(old_body.group(1)).elements
+            if protected.intersection(attrs) or tag in {"section", "figure", "img", "ol", "ul", "aside"}
+        ]
+        new_structure = [
+            (tag, {key: value for key, value in attrs.items() if key in protected})
+            for tag, attrs in Page(new_body.group(1)).elements
+            if protected.intersection(attrs) or tag in {"section", "figure", "img", "ol", "ul", "aside"}
+        ]
+        if old_structure != new_structure:
+            issues.append(f"{name}: case-study structure, routes or media differ from {BASELINE}")
 
     sitemap = ROOT / "sitemap.xml"
     if sitemap.is_file():
@@ -285,7 +300,7 @@ def verify():
     if issues:
         raise SystemExit("Portfolio verification failed:\n- " + "\n- ".join(issues))
     print(f"Verified {len(pages)} pages, {internal} internal references, {len(external)} distinct external links, and {len(actual_assets)} approved assets.")
-    print(f"Confirmed metadata, sitemap, publication boundary and unchanged legacy bodies from {BASELINE}. External link availability is a separate check.")
+    print(f"Confirmed metadata, sitemap, publication boundary and legacy case-study structure, routes and media from {BASELINE}. External link availability is a separate check.")
 
 
 if __name__ == "__main__":

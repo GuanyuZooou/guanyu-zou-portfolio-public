@@ -45,7 +45,7 @@ def contact_links(css):
 def header(home=False):
     prefix = "" if home else "index.html"
     nav = "\n".join(link(label, prefix + "#" + anchor) for anchor, label in (
-        ("work", "Projects"), ("approach", "Method"), ("about", "About"), ("contact", "Contact")
+        ("work", "Projects"), ("approach", "How I work"), ("about", "About"), ("contact", "Contact")
     ))
     return f'''<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="v2-header">
@@ -161,6 +161,10 @@ def anchor(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
+def section_id(section):
+    return section.get("id") or anchor(section["title"])
+
+
 def case_page(project):
     category = project["category"]
     group = "lab" if category == "innovation" else category
@@ -173,12 +177,12 @@ def case_page(project):
     for section in project["sections"]:
         citations = [link(label, source_url(project, source)) for label, source in section.get("evidence", [])]
         evidence = '<ul class="v2-evidence-links">' + "".join(f"<li>{item}</li>" for item in citations) + "</ul>" if citations else ""
-        sections.append(f'''<section class="v2-case-section" id="{anchor(section["title"])}">
+        sections.append(f'''<section class="v2-case-section" id="{esc(section_id(section))}">
   <h2>{esc(section["title"])}</h2>
   <p>{esc(section["text"])}</p>
   {evidence}
 </section>''')
-    side_links = "".join(f'<li>{link(s["title"], "#" + anchor(s["title"]))}</li>' for s in project["sections"])
+    side_links = "".join(f'<li>{link(s["title"], "#" + section_id(s))}</li>' for s in project["sections"])
     tags = "".join(f"<li>{esc(tag)}</li>" for tag in project["stack"])
     related = ""
     if project.get("related"):
@@ -197,7 +201,7 @@ def case_page(project):
 </header>
 <div class="v2-wrap v2-case-content">
   <aside class="v2-case-aside"><p class="v2-kicker">In this case</p><nav aria-label="Case sections"><ul>{side_links}</ul></nav>
-    <p class="v2-reviewed">Source snapshot <time datetime="{esc(project["updated"])}">{esc(project["updated"])}</time></p>
+    <p class="v2-reviewed">Source version <time datetime="{esc(project["updated"])}">{esc(project["updated"])}</time></p>
   </aside>
   <div class="v2-case-main">
     <p class="v2-case-outcome">{esc(project["outcome"])}</p>
