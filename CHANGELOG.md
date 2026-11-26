@@ -1,5 +1,10 @@
 # Changelog
 
+## Portfolio v2 · Targeted editorial refinement
+
+- Refines the Selected Projects introduction and describes both writing skills by the work they support.
+- Adds the file-transfer workflow to the existing Building for users example, alongside Palette Miner.
+
 ## Portfolio v2 · Final editorial polish
 
 - Broadens the homepage introduction to cover engineering models, research workflows and tools built with AI assistance.

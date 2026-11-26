@@ -168,7 +168,7 @@
       "category": "knowledge",
       "status": "Public Codex skill",
       "updated": "2026-08-13",
-      "summary": "A set of instructions for Codex that helps authors plan, draft and revise papers around the results they can support.",
+      "summary": "A reusable AI skill that helps researchers structure scientific arguments, organise evidence and revise manuscripts.",
       "outcome": "The Editor checks whether each claim follows from the results and helps plan the order of figures and arguments.",
       "stack": [
         "Codex skill",
@@ -211,7 +211,7 @@
       "category": "knowledge",
       "status": "Public Codex skill",
       "updated": "2026-08-13",
-      "summary": "A set of instructions for Codex that turns a selected group of papers into a writing guide, with examples and exceptions for each rule.",
+      "summary": "An AI-assisted workflow that derives reusable writing principles from scientific publications, with expert commentary where available. It checks proposed rules against supporting evidence and counterexamples.",
       "outcome": "Python scripts set up the review files and check that each draft rule includes fields for supporting examples and exceptions.",
       "stack": [
         "Codex skill",
